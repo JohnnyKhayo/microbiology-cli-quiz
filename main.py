@@ -82,4 +82,13 @@ for q in questions:
     else:
         print(f"Incorrect. The correct answer is {q["answer"]}")
 
+percentage = (score/len(questions))* 100
+print("\n-----------------")
+print(f"Your final score: {score}/{len(questions)} ({percentage:.0f}%)")
 
+if percentage >= 80:
+    print("Excellent!")
+elif percentage >= 50:
+    print("Good!")
+else:
+    print("Try Again")
