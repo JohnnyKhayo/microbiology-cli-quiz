@@ -59,5 +59,14 @@ for q in questions:
     print(q["question"])
     for option in q["options"]:
         print(option)
-        print()
+
+    guess = input("Enter (A, B, C, D):").upper()
+
+    if guess == q["answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Incorrect. The correct answer is {q["answer"]}")
+
+print(f"\nFinal score: {score}/{len(questions)}")
 
