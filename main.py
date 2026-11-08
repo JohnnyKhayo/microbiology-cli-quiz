@@ -1,3 +1,5 @@
+import random
+
 print("Welcome to the Microbiology Quiz!\n")
 print("Quiz starting soon...")
 
@@ -53,6 +55,9 @@ questions = [
         "answer": "C"
     }
 ]
+
+random.shuffle(questions)
+
 score = 0
 print("Welcome to the Microbiology Quiz!\n")
 
@@ -77,5 +82,4 @@ for q in questions:
     else:
         print(f"Incorrect. The correct answer is {q["answer"]}")
 
-print(f"\nFinal score: {score}/{len(questions)}")
 
