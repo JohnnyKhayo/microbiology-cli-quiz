@@ -54,5 +54,10 @@ questions = [
     }
 ]
 
-print("Questions loaded successfully.")
-print(f"Total questions: {len(questions)}")
+for q in questions:
+    print("-------------------")
+    print(q["question"])
+    for option in q["options"]:
+        print(option)
+        print()
+
