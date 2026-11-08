@@ -53,6 +53,8 @@ questions = [
         "answer": "C"
     }
 ]
+score = 0
+print("Welcome to the Microbiology Quiz!\n")
 
 for q in questions:
     print("-------------------")
@@ -60,7 +62,14 @@ for q in questions:
     for option in q["options"]:
         print(option)
 
-    guess = input("Enter (A, B, C, D):").upper()
+    while True:
+        try:
+            guess = input("Enter (A, B, C, D):").upper()
+            if guess not in ["A", "B", "C", "D"]:
+                raise ValueError
+            break
+        except ValueError:
+            print("Invalid input. Please enter A, B, C or D.")
 
     if guess == q["answer"]:
         print("Correct!")
